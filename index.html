@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>시즈오카 4박 5일 가족 여행</title>
+  <style>
+    :root {
+      --primary: #2b6cb0;
+      --bg: #f7fafc;
+      --card-bg: #ffffff;
+      --text: #2d3748;
+      --text-sub: #718096;
+      --accent: #ed8936;
+      --border: #e2e8f0;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; }
+    body { background-color: var(--bg); color: var(--text); padding-bottom: 40px; }
+    
+    header {
+      background: linear-gradient(135deg, #3182ce, #2b6cb0);
+      color: white;
+      padding: 24px 20px;
+      text-align: center;
+    }
+    header h1 { font-size: 1.3rem; margin-bottom: 6px; }
+    header p { font-size: 0.85rem; opacity: 0.9; }
+
+    /* 탭 메뉴 */
+    .tab-container {
+      display: flex;
+      overflow-x: auto;
+      background: white;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .tab-btn {
+      flex: 1;
+      min-width: 72px;
+      padding: 12px 8px;
+      text-align: center;
+      border: none;
+      background: none;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-sub);
+      cursor: pointer;
+      border-bottom: 3px solid transparent;
+      white-space: nowrap;
+    }
+    .tab-btn.active {
+      color: var(--primary);
+      border-bottom-color: var(--primary);
+    }
+
+    /* 컨텐츠 영역 */
+    .content { padding: 16px; max-width: 600px; margin: 0 auto; }
+    .day-panel { display: none; }
+    .day-panel.active { display: block; }
+
+    .summary-card {
+      background: #ebf8ff;
+      border: 1px solid #bee3f8;
+      border-radius: 10px;
+      padding: 12px 16px;
+      margin-bottom: 16px;
+      font-size: 0.85rem;
+      line-height: 1.5;
+    }
+    .summary-card strong { color: var(--primary); }
+
+    /* 타임라인 카드 */
+    .timeline { display: flex; flex-direction: column; gap: 12px; }
+    .card {
+      background: var(--card-bg);
+      border-radius: 12px;
+      padding: 14px 16px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+      border: 1px solid var(--border);
+    }
+    .time-badge {
+      display: inline-block;
+      background: #edf2f7;
+      color: #4a5568;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 4px;
+      margin-bottom: 6px;
+    }
+    .card h3 { font-size: 1rem; margin-bottom: 6px; color: #1a202c; }
+    .card p { font-size: 0.85rem; color: #4a5568; line-height: 1.45; }
+    
+    .tip-box {
+      margin-top: 8px;
+      padding-top: 8px;
+      border-top: 1px dashed var(--border);
+      font-size: 0.8rem;
+      color: var(--accent);
+      display: flex;
+      align-items: flex-start;
+      gap: 4px;
+    }
+
+    /* 링크 버튼 디자인 */
+    .btn-group {
+      margin-top: 10px;
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .map-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      background: #edf2f7;
+      color: #2b6cb0;
+      text-decoration: none;
+      padding: 6px 10px;
+      border-radius: 6px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      border: 1px solid #cbd5e0;
+      transition: 0.2s;
+    }
+    .map-btn:hover { background: #e2e8f0; }
+    .food-btn { color: #c05621; background: #feebc8; border-color: #fbd38d; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>시즈오카 4박 5일 힐링 여행</h1>
+    <p>가족과 함께하는 후지산 & 캠크닉 여정</p>
+  </header>
+
+  <nav class="tab-container">
+    <button class="tab-btn active" onclick="switchTab(0)">1일차(금)</button>
+    <button class="tab-btn" onclick="switchTab(1)">2일차(토)</button>
+    <button class="tab-btn" onclick="switchTab(2)">3일차(일)</button>
+    <button class="tab-btn" onclick="switchTab(3)">4일차(월)</button>
+    <button class="tab-btn" onclick="switchTab(4)">5일차(화)</button>
+  </nav>
+
+  <main class="content">
+
+    <!-- Day 1 -->
+    <section class="day-panel active">
+      <div class="summary-card">
+        <strong>목표:</strong> 입국 & 렌터카 수령 후 고텐바 아울렛 쇼핑<br>
+        <strong>식사:</strong> 조식(인천공항) / 중식·석식(고텐바 아울렛 또는 숙소)
+      </div>
+      <div class="timeline">
+        <div class="card">
+          <span class="time-badge">09:00</span>
+          <h3>시즈오카 공항 도착</h3>
+          <p>입국 수속 완료 후 렌터카 카운터로 이동</p>
+          <div class="btn-group">
+            <a href="https://www.google.com/maps/search/?api=1&query=Mt.+Fuji+Shizuoka+Airport" target="_blank" class="map-btn">📍 공항 지도</a>
+          </div>
+        </div>
+        <div class="card">
+          <span class="time-badge">12:00 ~ 16:30</span>
+          <h3>고텐바 프리미엄 아울렛</h3>
+          <p>아울렛 푸드코트 점심 식사 및 쇼핑</p>
+          <div class="tip-box">💡 유모차 대여 가능, 쇼핑 중 유모차 낮잠</div>
+          <div class="btn-group">
+            <a href="https://www.google.com/maps/search/?api=1&query=Gotemba+Premium+Outlets" target="_blank" class="map-btn">📍 구글 지도</a>
+            <a href="https://www.premiumoutlets.co.jp/gotemba/ko/" target="_blank" class="map-btn">🌐 한국어 홈페이지</a>
+          </div>
+        </div>
+        <div class="card">
+          <span class="time-badge">16:30 ~</span>
+          <h3>후지시 숙소 이동 & 휴식</h3>
+          <p>숙소 근처 식당 저녁 식사 또는 마트 포장 후 휴식</p>
+          <div class="btn-group">
+            <a href="https://www.google.com/maps/search/?api=1&query=Fuji+City+Supermarket" target="_blank" class="map-btn food-btn">🛒 후지시 근처 마트 검색</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Day 2 -->
+    <section class="day-panel">
+      <div class="summary-card">
+        <strong>목표:</strong> 마카이노 목장 동물 체험 & 후모톳파라 캠크닉<br>
+        <strong>식사:</strong> 조식(숙소) / 중식(피크닉 도시락) / 석식(이온몰 식당가)
+      </div>
+      <div class="timeline">
+        <div class="card">
+          <span class="time-badge">09:30 ~ 12:00</span>
+          <h3>마카이노 목장 체험</h3>
+          <p>양/동물 먹이주기, 우유 및 소프트아이스크림 간식</p>
+          <div class="btn-group">
+            <a href="https://www.google.com/maps/search/?api=1&query=Makaino+Farm" target="_blank" class="map-btn">📍 구글 지도</a>
+            <a href="https://www.makaino.com/" target="_blank" class="map-btn">🌐 공식 홈페이지</a>
+          </div>
+        </div>
+        <div class="card">
+          <span class="time-badge">12:30 ~ 16:30</span>
+          <h3>후모톳파라 캠핑장 (데이캠프)</h3>
+          <p>후지산 전망 피크닉 및 돗자리에서 아이 낮잠 재우기 (가는 길 편의점 털기 필수)</p>
+          <div class="tip-box">💡 사전 웹 예약 필수</div>
+          <div class="btn-group">
+            <a href="https://www.google.com/maps/search/?api=1&query=Fumotoppara+Campground" target="_blank" class="map-btn">📍 구글 지도</a>
+            <a href="https://fumotoppara.net/" target="_blank" class="map-btn">🏕️ 예약 홈페이지</a>
+          </div>
+        </div>
+        <div class="card">
+          <span class="time-badge">17:00 ~</span>
+          <h3>이온몰 후지노미야 & 복귀</h3>
+          <p>이온몰 식당가에서 저녁 식사 및 쇼핑 후 숙소 복귀</p>
+          <div class="btn-group">
+            <a href="https://www.google.com/maps/search/?api=1&query=Aeon+Mall+Fujinomiya" target="_blank" class="map-btn">📍 구글 지도</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Day 3 -->
+    <section class="day-panel">
+      <div class="summary-card">
+        <strong>목표:</strong> 후지요시다 포토존 & (사파리 or 시내 선택)<br>
+        <strong>식사:</strong> 조식(숙소) / 중식(요시다 우동) / 석식(함바그/야키니쿠)
+      </div>
+      <div class="timeline">
+        <div class="card">
+          <span class="time-badge">09:30 ~ 12:00</span>
+          <h3>후지요시다 & 가와구치코</h3>
+          <p>혼초거리 포토존, 로손 포토스팟, 후지산 세계유산센터</p>
+          <div class="btn-group">
+            <a href="https://www.google.com/maps/search/?api=1&query=Paraca+Fujiyoshida+City+Parking+Lot" target="_blank" class="map-btn">🅿️ 파라카 주차장</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=Lawson+Kawaguchiko+Station" target="_blank" class="map-btn">📍 로손 가와구치코점</a>
+          </div>
+        </div>
+        <div class="card">
+          <span class="time-badge">13:00 ~ 16:30</span>
+          <h3>오후 일정 선택 (A / B)</h3>
+          <p><strong>A안:</strong> 후지 사파리 파크 (차 타고 관람 가능)<br><strong>B안:</strong> 후지시 꿈의 대교 & 중앙공원 산책</p>
+          <div class="btn-group">
+            <a href="https://www.google.com/maps/search/?api=1&query=Fuji+Safari+Park" target="_blank" class="map-btn">🦁 사파리 파크 지도</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=Fuji+Dream+Bridge" target="_blank" class="map-btn">🌉 꿈의 대교 지도</a>
+          </div>
+        </div>
+        <div class="card">
+          <span class="time-badge">17:30 ~</span>
+          <h3>저녁 식사 추천</h3>
+          <p>시즈오카 명물 '사와야카 함바그' 또는 야키니쿠</p>
+          <div class="btn-group">
+            <a href="https://www.google.com/maps/search/?api=1&query=Sawayaka+Hamburg+Fuji" target="_blank" class="map-btn food-btn">🍴 사와야카 함바그 후지점</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Day 4 -->
+    <section class="day-panel">
+      <div class="summary-card">
+        <strong>목표:</strong> 야이즈 실내 체험 & 시즈오카 시내 쇼핑<br>
+        <strong>식사:</strong> 조식(숙소) / 중식(야이즈 수산센터) / 석식(시내 맛집)
+      </div>
+      <div class="timeline">
+        <div class="card">
+          <span class="time-badge">10:00 ~ 12:30</span>
+          <h3>야이즈 장난감 미술관</h3>
+          <p>원목 장난감 기반 실내 놀이터 (아이들 최적화)</p>
+          <div class="btn-group">
+            <a href="https://www.google.com/maps/search/?api=1&query=Yaizu+Toy+Museum" target="_blank" class="map-btn">📍 구글 지도</a>
+            <a href="https://yaizu-toymuseum.com/" target="_blank" class="map-btn">🌐 홈페이지</a>
+          </div>
+        </div>
+        <div class="card">
+          <span class="time-badge">12:30 ~ 13:30</span>
+          <h3>야이즈 사카나센터 (수산시장)</h3>
+          <p>점심 식사 (해산물 덮밥, 튀김류 등)</p>
+          <div class="btn-group">
+            <a href="https://www.google.com/maps/search/?api=1&query=Yaizu+Sakana+Center" target="_blank" class="map-btn food-btn">🍣 구글 지도</a>
+          </div>
+        </div>
+        <div class="card">
+          <span class="time-badge">14:00 ~ 17:30</span>
+          <h3>시즈오카 시내 쇼핑</h3>
+          <p>신시즈오카 세노바, 파르코 백화점 쇼핑 및 유아 휴게실 이용</p>
+          <div class="btn-group">
+            <a href="https://www.google.com/maps/search/?api=1&query=Cenova+Shizuoka" target="_blank" class="map-btn">🛍️ 신시즈오카 세노바</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=Shizuoka+Parco" target="_blank" class="map-btn">🛍️ 파르코 백화점</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Day 5 -->
+    <section class="day-panel">
+      <div class="summary-card">
+        <strong>목표:</strong> 렌터카 반납 & 무사 귀국<br>
+        <strong>식사:</strong> 기내 간식 및 편의점식
+      </div>
+      <div class="timeline">
+        <div class="card">
+          <span class="time-badge">08:10</span>
+          <h3>렌터카 반납</h3>
+          <p>시즈오카 공항 인근 영업소 (주유 후 반납)</p>
+          <div class="btn-group">
+            <a href="https://www.google.com/maps/search/?api=1&query=Gas+Station+near+Shizuoka+Airport" target="_blank" class="map-btn">⛽ 공항 근처 주유소</a>
+          </div>
+        </div>
+        <div class="card">
+          <span class="time-badge">08:30 ~ 10:10</span>
+          <h3>출국 수속 & 탑승</h3>
+          <p>10:10 비행기로 인천공항 귀국</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    function switchTab(index) {
+      const tabs = document.querySelectorAll('.tab-btn');
+      const panels = document.querySelectorAll('.day-panel');
+      tabs.forEach((tab, i) => {
+        tab.classList.toggle('active', i === index);
+        panels[i].classList.toggle('active', i === index);
+      });
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>
