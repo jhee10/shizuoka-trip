@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>시즈오카 4박 5일 가족 여행</title>
+  <title>시즈오카 4박 5일 가족 여행 완벽 가이드</title>
   <style>
     :root {
       --primary: #2b6cb0;
@@ -12,10 +12,11 @@
       --text: #2d3748;
       --text-sub: #718096;
       --accent: #dd6b20;
+      --green: #2f855a;
       --border: #e2e8f0;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; }
-    body { background-color: var(--bg); color: var(--text); padding-bottom: 40px; }
+    body { background-color: var(--bg); color: var(--text); padding-bottom: 50px; }
     
     header {
       background: linear-gradient(135deg, #3182ce, #2b6cb0);
@@ -38,12 +39,12 @@
     }
     .tab-btn {
       flex: 1;
-      min-width: 72px;
-      padding: 12px 8px;
+      min-width: 68px;
+      padding: 12px 6px;
       text-align: center;
       border: none;
       background: none;
-      font-size: 0.85rem;
+      font-size: 0.82rem;
       font-weight: 600;
       color: var(--text-sub);
       cursor: pointer;
@@ -53,6 +54,9 @@
     .tab-btn.active {
       color: var(--primary);
       border-bottom-color: var(--primary);
+    }
+    .tab-btn.highlight {
+      color: #c53030;
     }
 
     /* 컨텐츠 영역 */
@@ -64,9 +68,9 @@
       background: #ebf8ff;
       border: 1px solid #bee3f8;
       border-radius: 10px;
-      padding: 12px 16px;
+      padding: 12px 14px;
       margin-bottom: 16px;
-      font-size: 0.85rem;
+      font-size: 0.82rem;
       line-height: 1.5;
     }
     .summary-card strong { color: var(--primary); }
@@ -80,6 +84,7 @@
       box-shadow: 0 1px 3px rgba(0,0,0,0.06);
       border: 1px solid var(--border);
     }
+    .badge-wrap { display: flex; gap: 6px; align-items: center; margin-bottom: 6px; flex-wrap: wrap; }
     .time-badge {
       display: inline-block;
       background: #edf2f7;
@@ -88,247 +93,27 @@
       font-weight: 700;
       padding: 3px 8px;
       border-radius: 4px;
-      margin-bottom: 6px;
     }
     .flight-badge { background: #feebc8; color: #c05621; }
+    .status-badge {
+      font-size: 0.72rem;
+      padding: 2px 7px;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+    .status-req { background: #fed7d7; color: #9b2c2c; }
+    .status-free { background: #c6f6d5; color: #22543d; }
+    .status-ok { background: #e2e8f0; color: #4a5568; }
     
     .card h3 { font-size: 1rem; margin-bottom: 6px; color: #1a202c; }
     .card p { font-size: 0.85rem; color: #4a5568; line-height: 1.45; }
     
-    .tip-box {
+    .price-box {
       margin-top: 8px;
-      padding-top: 8px;
-      border-top: 1px dashed var(--border);
-      font-size: 0.8rem;
-      color: var(--accent);
-      display: flex;
-      align-items: flex-start;
-      gap: 4px;
-    }
-
-    /* 링크 버튼 디자인 */
-    .btn-group {
-      margin-top: 10px;
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-    }
-    .map-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-      background: #edf2f7;
-      color: #2b6cb0;
-      text-decoration: none;
+      background: #f7fafc;
+      border-left: 3px solid var(--primary);
       padding: 6px 10px;
-      border-radius: 6px;
-      font-size: 0.75rem;
-      font-weight: 600;
-      border: 1px solid #cbd5e0;
-      transition: 0.2s;
+      font-size: 0.78rem;
+      color: #4a5568;
     }
-    .map-btn:hover { background: #e2e8f0; }
-    .home-btn { color: #2f855a; background: #c6f6d5; border-color: #9ae6b4; }
-    .mart-btn { color: #805ad5; background: #e9d8fd; border-color: #d6bcfa; }
-    .food-btn { color: #c05621; background: #feebc8; border-color: #fbd38d; }
-  </style>
-</head>
-<body>
-
-  <header>
-    <h1>시즈오카 4박 5일 가족 여행</h1>
-    <p>아기와 함께하는 후지산 & 힐링 투어</p>
-  </header>
-
-  <nav class="tab-container">
-    <button class="tab-btn active" onclick="switchTab(0)">1일차(금)</button>
-    <button class="tab-btn" onclick="switchTab(1)">2일차(토)</button>
-    <button class="tab-btn" onclick="switchTab(2)">3일차(일)</button>
-    <button class="tab-btn" onclick="switchTab(3)">4일차(월)</button>
-    <button class="tab-btn" onclick="switchTab(4)">5일차(화)</button>
-  </nav>
-
-  <main class="content">
-
-    <!-- Day 1 -->
-    <section class="day-panel active">
-      <div class="summary-card">
-        <strong>항공편:</strong> 제주항공 7C1601 (인천 제1터미널) ➔ 시즈오카<br>
-        <strong>수하물:</strong> 위탁 수하물 15kg 제공 (스탠다드 운임)<br>
-        <strong>숙소:</strong> 후지시 아파트 (후지초 11-1, 3층)
-      </div>
-      <div class="timeline">
-        <div class="card">
-          <span class="time-badge flight-badge">07:05 ~ 09:00</span>
-          <h3>출국 & 시즈오카 공항 도착</h3>
-          <p>인천(ICN) 07:05 출발 ➔ 시즈오카(FSZ) 09:00 도착. 입국 수속 완료 후 렌터카 카운터 이동</p>
-        </div>
-        <div class="card">
-          <span class="time-badge">12:00 ~ 16:30</span>
-          <h3>고텐바 프리미엄 아울렛</h3>
-          <p>아울렛 푸드코트 점심 식사 및 쇼핑</p>
-          <div class="tip-box">💡 유모차 대여 가능, 쇼핑 중 아기 낮잠 유도</div>
-          <div class="btn-group">
-            <a href="https://www.google.com/maps/search/?api=1&query=Gotemba+Premium+Outlets" target="_blank" class="map-btn">📍 아울렛 구글 지도</a>
-          </div>
-        </div>
-        <div class="card">
-          <span class="time-badge">17:00 ~</span>
-          <h3>후지시 숙소 체크인 & 장보기</h3>
-          <p>숙소 도착 후 저녁 식사 및 근처 마트에서 내일 먹을 간식/물 장보기</p>
-          <div class="btn-group">
-            <a href="https://www.google.com/maps/search/?api=1&query=11-1+Fujicho,+Fuji,+Shizuoka" target="_blank" class="map-btn home-btn">🏠 숙소: 후지초 11-1 구글 지도</a>
-            <a href="https://www.google.com/maps/search/?api=1&query=Shizutetsu+Store+Fuji+Station+South" target="_blank" class="map-btn mart-btn">🛒 마트1: 시즈테츠 스토어 (가장 가까움)</a>
-            <a href="https://www.google.com/maps/search/?api=1&query=MaxValu+Express+Fuji+Mitojima" target="_blank" class="map-btn mart-btn">🛒 마트2: 맥스밸류 (밤 11시반까지)</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Day 2 -->
-    <section class="day-panel">
-      <div class="summary-card">
-        <strong>목표:</strong> 동물 체험 및 가와구치코 포토존 투어<br>
-        <strong>아기 식사 꿀팁:</strong> 사파리 안에는 키즈 메뉴가 있고, 저녁 식당은 넓은 다다미방과 부드러운 우동이 있어 아기와 먹기 완벽합니다.
-      </div>
-      <div class="timeline">
-        <div class="card">
-          <span class="time-badge">09:00 ~ 12:00</span>
-          <h3>후지 사파리 파크</h3>
-          <p>내 차 타고 편하게 들어가는 사파리 관람</p>
-          <div class="btn-group">
-            <a href="https://www.google.com/maps/search/?api=1&query=Fuji+Safari+Park" target="_blank" class="map-btn">🦁 사파리 파크 지도</a>
-          </div>
-        </div>
-        <div class="card">
-          <span class="time-badge">12:00 ~ 13:00</span>
-          <h3>점심 식사: 사파리 레스토랑</h3>
-          <p>사파리 파크 내 식당 이용 (귀여운 동물 카레, 아기 의자, 키즈 플레이트 완비)</p>
-        </div>
-        <div class="card">
-          <span class="time-badge">13:00 ~ 17:00</span>
-          <h3>가와구치코 & 후지요시다 관광</h3>
-          <p>이동 중 낮잠 (약 50분) ➔ 혼초거리, 로손 가와구치코 포토존 ➔ 오이시 공원 산책</p>
-        </div>
-        <div class="card">
-          <span class="time-badge">17:00 ~ 18:30</span>
-          <h3>저녁 식사: 호우토우 후도</h3>
-          <p>가와구치코 명물 면 요리 맛집. 둥근 돔 모양의 독특한 외관. 면이 굵고 부드러워 아기와 나눠 먹기 좋고 다다미방이 있어 매우 편합니다.</p>
-          <div class="btn-group">
-            <a href="https://www.google.com/maps/search/?api=1&query=Houtou+Fudou+Higashikoiji" target="_blank" class="map-btn food-btn">🍲 호우토우 후도 구글 지도</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Day 3 -->
-    <section class="day-panel">
-      <div class="summary-card">
-        <strong>목표:</strong> 자연 속 목장 체험 & 후지산 피크닉<br>
-        <strong>아기 식사 꿀팁:</strong> 저녁은 복합 쇼핑몰을 이용해 아기 기저귀 교환과 유아 휴게실 이용을 한 번에 해결합니다.
-      </div>
-      <div class="timeline">
-        <div class="card">
-          <span class="time-badge">09:30 ~ 12:00</span>
-          <h3>마카이노 목장</h3>
-          <p>동물 먹이주기 체험, 신선한 우유 및 소프트아이스크림 간식</p>
-          <div class="btn-group">
-            <a href="https://www.google.com/maps/search/?api=1&query=Makaino+Farm" target="_blank" class="map-btn">📍 목장 구글 지도</a>
-          </div>
-        </div>
-        <div class="card">
-          <span class="time-badge">12:30 ~ 16:30</span>
-          <h3>후모톳파라 캠크닉 (데이캠프)</h3>
-          <p>가는 길에 마트에서 산 도시락으로 피크닉 ➔ 돗자리에서 아이 낮잠</p>
-          <div class="tip-box">💡 낮잠용 도톰한 돗자리/담요 필수</div>
-          <div class="btn-group">
-            <a href="https://www.google.com/maps/search/?api=1&query=Fumotoppara+Campground" target="_blank" class="map-btn">🏕️ 후모톳파라 구글 지도</a>
-          </div>
-        </div>
-        <div class="card">
-          <span class="time-badge">17:00 ~</span>
-          <h3>저녁: 이온몰 후지노미야 (푸드코트)</h3>
-          <p>대형 마트라 유아 휴게실이 완벽합니다. 우동, 돈가스 등 아기가 먹을 수 있는 메뉴가 널려있습니다.</p>
-          <div class="btn-group">
-            <a href="https://www.google.com/maps/search/?api=1&query=Aeon+Mall+Fujinomiya" target="_blank" class="map-btn food-btn">🏬 이온몰 지도</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Day 4 -->
-    <section class="day-panel">
-      <div class="summary-card">
-        <strong>목표:</strong> 시내 구경 후 야이즈 실내 놀이터 방문<br>
-        <strong>숙소:</strong> 카메노이 호텔 야이즈 (Kamenoi Hotel Yaizu)
-      </div>
-      <div class="timeline">
-        <div class="card">
-          <span class="time-badge">09:30 ~ 12:00</span>
-          <h3>시즈오카 시내 구경</h3>
-          <p>신시즈오카 세노바, 파르코 백화점 쇼핑 및 백화점 유아 휴게실 이용</p>
-        </div>
-        <div class="card">
-          <span class="time-badge">12:00 ~ 13:30</span>
-          <h3>점심 식사: 시내 백화점 또는 맛집</h3>
-          <p>세노바 3층 푸드코트(아기의자 많음) 또는 5층 사와야카 함바그(대기 확인)</p>
-        </div>
-        <div class="card">
-          <span class="time-badge">14:00 ~ 16:30</span>
-          <h3>이동 & 야이즈 장난감 미술관</h3>
-          <p>시내에서 약 30~40분 이동. 원목 장난감 기반의 최고급 실내 놀이터 체험</p>
-          <div class="btn-group">
-            <a href="https://www.google.com/maps/search/?api=1&query=Yaizu+Toy+Museum" target="_blank" class="map-btn">📍 장난감 미술관 지도</a>
-          </div>
-        </div>
-        <div class="card">
-          <span class="time-badge">17:00 ~</span>
-          <h3>카메노이 호텔 체크인 & 야이즈 장보기</h3>
-          <p>근처 스시로(회전초밥)에서 저녁 식사 후 카메노이 호텔 야이즈 체크인. 주변 대형 마트에서 간식거리 쇼핑.</p>
-          <div class="btn-group">
-            <a href="https://www.google.com/maps/search/?api=1&query=Kamenoi+Hotel+Yaizu" target="_blank" class="map-btn home-btn">🏨 숙소: 카메노이 호텔 야이즈</a>
-            <a href="https://www.google.com/maps/search/?api=1&query=Aeon+Yaizu" target="_blank" class="map-btn mart-btn">🛒 마트1: 이온 야이즈점 (초대형 마트)</a>
-            <a href="https://www.google.com/maps/search/?api=1&query=KO+Mart+Yaizu" target="_blank" class="map-btn mart-btn">🛒 마트2: KO마트 야이즈 (현지 체인)</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Day 5 -->
-    <section class="day-panel">
-      <div class="summary-card">
-        <strong>항공편:</strong> 제주항공 7C1602 시즈오카 ➔ 인천 (제1터미널)<br>
-        <strong>수하물:</strong> 위탁 수하물 15kg 제공 (스탠다드 운임)
-      </div>
-      <div class="timeline">
-        <div class="card">
-          <span class="time-badge">08:00</span>
-          <h3>렌터카 반납</h3>
-          <p>시즈오카 공항 인근 주유소 주유 후 반납 (체크아웃은 07시 20분경)</p>
-          <div class="btn-group">
-            <a href="https://www.google.com/maps/search/?api=1&query=Gas+Station+near+Shizuoka+Airport" target="_blank" class="map-btn">⛽ 공항 근처 주유소</a>
-          </div>
-        </div>
-        <div class="card">
-          <span class="time-badge flight-badge">10:10 ~ 12:40</span>
-          <h3>출국 수속 & 비행기 탑승</h3>
-          <p>시즈오카(FSZ) 10:10 출발 ➔ 인천(ICN) 12:40 도착</p>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <script>
-    function switchTab(index) {
-      const tabs = document.querySelectorAll('.tab-btn');
-      const panels = document.querySelectorAll('.day-panel');
-      tabs.forEach((tab, i) => {
-        tab.classList.toggle('active', i === index);
-        panels[i].classList.toggle('active', i === index);
-      });
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-  </script>
-</body>
-</html>
+    .
