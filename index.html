@@ -13,6 +13,7 @@
       --text-sub: #718096;
       --accent: #dd6b20;
       --green: #2f855a;
+      --purple: #805ad5;
       --border: #e2e8f0;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif; }
@@ -84,6 +85,10 @@
       box-shadow: 0 1px 3px rgba(0,0,0,0.06);
       border: 1px solid var(--border);
     }
+    .card.optional-card {
+      border: 1.5px dashed var(--purple);
+      background: #faf5ff;
+    }
     .badge-wrap { display: flex; gap: 6px; align-items: center; margin-bottom: 6px; flex-wrap: wrap; }
     .time-badge {
       display: inline-block;
@@ -99,6 +104,7 @@
     .status-req { background: #fed7d7; color: #9b2c2c; }
     .status-free { background: #c6f6d5; color: #22543d; }
     .status-ok { background: #e2e8f0; color: #4a5568; }
+    .status-opt { background: #e9d8fd; color: #553c9a; }
     
     .card h3 { font-size: 1rem; margin-bottom: 6px; color: #1a202c; }
     .card p { font-size: 0.85rem; color: #4a5568; line-height: 1.45; }
@@ -176,7 +182,7 @@
     <!-- Day 1 (금) -->
     <section class="day-panel">
       <div class="summary-card">
-        <strong>목표:</strong> 장보기 ➔ 목장 체험 ➔ 후지산 데이캠프<br>
+        <strong>목표:</strong> 장보기 ➔ 목장 체험 ➔ 후지산 데이캠프 (또는 기차 구경)<br>
         <strong>항공:</strong> 07:05 ICN ➔ 09:00 FSZ (제주 7C1601)<br>
         <strong>숙소:</strong> 후지시 아파트 (후지초 11-1)
       </div>
@@ -208,7 +214,7 @@
         </div>
 
         <div class="card">
-          <div class="badge-wrap"><span class="time-badge">14:30 ~ 17:00</span><span class="status-badge status-req">예약 필수</span></div>
+          <div class="badge-wrap"><span class="time-badge">14:30 ~ 16:30</span><span class="status-badge status-req">예약 필수</span></div>
           <h3>후모톳파라 캠핑장 데이캠프</h3>
           <p>마트에서 산 돗자리 깔고 후지산 보며 피크닉 & 도윤이 낮잠 타임</p>
           <div class="navi-box">☎️ 내비: 0544-52-2112</div>
@@ -216,10 +222,24 @@
           <div class="btn-group"><a href="https://www.google.com/maps/search/?api=1&query=Fumotoppara+Campground" target="_blank" class="btn">🏕️ 후모톳파라 지도</a></div>
         </div>
 
+        <!-- 옵션 카드: 가쿠난 후지오카역 -->
+        <div class="card optional-card">
+          <div class="badge-wrap">
+            <span class="time-badge" style="background: #e9d8fd; color: #553c9a;">선택 / 옵션</span>
+            <span class="status-badge status-free">무료 관람 & 주차</span>
+          </div>
+          <h3>🚂 가쿠난 후지오카역 (전기기관차 광장)</h3>
+          <p>후모톳파라를 안 가거나 숙소 체크인 전 시간이 남을 때 들르기 좋은 기차 스팟! 실제 퇴역한 클래식 전기기관차 4대가 야외 전시되어 있어 눈앞에서 만져보고 사진 찍기 좋습니다. 알록달록한 레트로 꼬마기차(가쿠난 전차)도 지나갑니다.</p>
+          <div class="navi-box">☎️ 내비: 0545-53-5111 (인근 검색용)</div>
+          <div class="btn-group">
+            <a href="https://www.google.com/maps/search/?api=1&query=Gakunan-Fujioka+Station" target="_blank" class="btn">🚂 후지오카역 지도</a>
+          </div>
+        </div>
+
         <div class="card">
           <div class="badge-wrap"><span class="time-badge">18:00 ~</span></div>
           <h3>후지시 숙소 체크인 & 저녁 식사</h3>
-          <p>피크닉 후 🚗 약 45분 이동하여 숙소 도착 및 근처 식당(아지노민게이 일식 등) 저녁 식사</p>
+          <p>숙소 도착 및 근처 식당(아지노민게이 일식 등) 저녁 식사</p>
           <div class="btn-group"><a href="https://www.google.com/maps/search/?api=1&query=11-1+Fujicho,+Fuji,+Shizuoka" target="_blank" class="btn home-btn">🏠 후지시 숙소 위치</a></div>
         </div>
       </div>
@@ -336,7 +356,7 @@
           <div class="navi-box">☎️ 내비: 054-625-8322</div>
           <div class="price-box">💵 <strong>입장료:</strong> 대인 700엔 / 유아 500엔 / <strong>1세 미만 무료</strong></div>
           <div class="btn-group">
-            <a href="https://www.google.com/maps/search/?api=1&query=Yaizu+Toy+Museum" target="_blank" class="btn">📍 미술관 지도</a>
+            <a href="https://yaizu-toymuseum.com/" target="_blank" class="btn">📍 미술관 지도</a>
           </div>
         </div>
 
