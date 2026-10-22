@@ -95,12 +95,7 @@
       border-radius: 4px;
     }
     .flight-badge { background: #feebc8; color: #c05621; }
-    .status-badge {
-      font-size: 0.72rem;
-      padding: 2px 7px;
-      border-radius: 4px;
-      font-weight: 600;
-    }
+    .status-badge { font-size: 0.72rem; padding: 2px 7px; border-radius: 4px; font-weight: 600; }
     .status-req { background: #fed7d7; color: #9b2c2c; }
     .status-free { background: #c6f6d5; color: #22543d; }
     .status-ok { background: #e2e8f0; color: #4a5568; }
@@ -108,46 +103,14 @@
     .card h3 { font-size: 1rem; margin-bottom: 6px; color: #1a202c; }
     .card p { font-size: 0.85rem; color: #4a5568; line-height: 1.45; }
     
-    .price-box {
-      margin-top: 8px;
-      background: #f7fafc;
-      border-left: 3px solid var(--primary);
-      padding: 6px 10px;
-      font-size: 0.78rem;
-      color: #4a5568;
-    }
-    .tip-box {
-      margin-top: 8px;
-      padding-top: 8px;
-      border-top: 1px dashed var(--border);
-      font-size: 0.8rem;
-      color: var(--accent);
-      display: flex;
-      align-items: flex-start;
-      gap: 4px;
-      line-height: 1.4;
-    }
+    .price-box { margin-top: 8px; background: #f7fafc; border-left: 3px solid var(--primary); padding: 6px 10px; font-size: 0.78rem; color: #4a5568; }
+    .navi-box { display: inline-block; margin-top: 6px; background: #e2e8f0; padding: 4px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: bold; color: #2d3748; }
+    
+    .tip-box { margin-top: 8px; padding-top: 8px; border-top: 1px dashed var(--border); font-size: 0.8rem; color: var(--accent); display: flex; align-items: flex-start; gap: 4px; line-height: 1.4; }
 
     /* 링크 버튼 */
-    .btn-group {
-      margin-top: 10px;
-      display: flex;
-      gap: 6px;
-      flex-wrap: wrap;
-    }
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-      background: #edf2f7;
-      color: #2b6cb0;
-      text-decoration: none;
-      padding: 6px 9px;
-      border-radius: 6px;
-      font-size: 0.75rem;
-      font-weight: 600;
-      border: 1px solid #cbd5e0;
-    }
+    .btn-group { margin-top: 10px; display: flex; gap: 6px; flex-wrap: wrap; }
+    .btn { display: inline-flex; align-items: center; gap: 4px; background: #edf2f7; color: #2b6cb0; text-decoration: none; padding: 6px 9px; border-radius: 6px; font-size: 0.75rem; font-weight: 600; border: 1px solid #cbd5e0; }
     .home-btn { color: #2f855a; background: #c6f6d5; border-color: #9ae6b4; }
     .mart-btn { color: #805ad5; background: #e9d8fd; border-color: #d6bcfa; }
     .food-btn { color: #c05621; background: #feebc8; border-color: #fbd38d; }
@@ -156,17 +119,7 @@
     /* 체크리스트 스타일 */
     .check-section-title { font-size: 1.1rem; color: var(--primary); margin: 20px 0 10px; font-weight: bold; border-bottom: 2px solid var(--primary); padding-bottom: 5px; }
     .check-list { display: flex; flex-direction: column; gap: 10px; }
-    .check-item {
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 12px;
-      font-size: 0.85rem;
-      display: flex;
-      gap: 10px;
-      align-items: flex-start;
-      box-shadow: 0 1px 2px rgba(0,0,0,0.05);
-    }
+    .check-item { background: white; border: 1px solid var(--border); border-radius: 8px; padding: 12px; font-size: 0.85rem; display: flex; gap: 10px; align-items: flex-start; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }
     .check-item input[type="checkbox"] { margin-top: 4px; transform: scale(1.2); cursor: pointer; }
     .check-content { flex: 1; }
     .check-content strong { color: #2d3748; display: block; margin-bottom: 3px; }
@@ -201,147 +154,98 @@
       
       <h2 class="check-section-title">📝 서류 & 결제</h2>
       <div class="check-list">
-        <label class="check-item">
-          <input type="checkbox">
-          <div class="check-content">
-            <strong>여권 (성인 & 도윤이)</strong>
-            <div class="check-desc">유효기간 6개월 이상 남았는지 반드시 확인</div>
-          </div>
-        </label>
-        <label class="check-item">
-          <input type="checkbox">
-          <div class="check-content">
-            <strong>국제운전면허증 & 한국 운전면허증</strong>
-            <div class="check-desc">일본 렌터카 수령 시 두 가지 실물 모두 필수 제시</div>
-          </div>
-        </label>
-        <label class="check-item">
-          <input type="checkbox">
-          <div class="check-content">
-            <strong>비짓재팬웹(Visit Japan Web) QR 코드</strong>
-            <div class="check-desc">출국 2~3일 전 등록 완료 후 입국/세관 QR 캡처해두기</div>
-          </div>
-        </label>
-        <label class="check-item">
-          <input type="checkbox">
-          <div class="check-content">
-            <strong>결제 수단 준비</strong>
-            <div class="check-desc">트래블로그/월렛 카드 & 현금 약 2~3만 엔 (목장 자판기 등 현금 필요)</div>
-          </div>
-        </label>
+        <label class="check-item"><input type="checkbox"><div class="check-content"><strong>여권 (성인 & 도윤이)</strong><div class="check-desc">유효기간 6개월 이상 남았는지 반드시 확인</div></div></label>
+        <label class="check-item"><input type="checkbox"><div class="check-content"><strong>국제운전면허증 & 한국 운전면허증</strong><div class="check-desc">일본 렌터카 수령 시 두 가지 실물 모두 필수 제시</div></div></label>
+        <label class="check-item"><input type="checkbox"><div class="check-content"><strong>비짓재팬웹(Visit Japan Web) QR 코드</strong><div class="check-desc">출국 전 등록 완료 후 입국/세관 QR 캡처해두기</div></div></label>
       </div>
 
       <h2 class="check-section-title">🍼 도윤이 케어 & 보온 용품</h2>
       <div class="check-list">
-        <label class="check-item">
-          <input type="checkbox">
-          <div class="check-content">
-            <strong>방한 겉옷 & 바람막이/경량패딩</strong>
-            <div class="check-desc">10월 말 후모톳파라(캠핑장) 등 고지대 필수 방한용품</div>
-          </div>
-        </label>
-        <label class="check-item">
-          <input type="checkbox">
-          <div class="check-content">
-            <strong>기내 반입 휴대용 유모차 & 방풍/방한 커버</strong>
-            <div class="check-desc">아울렛 및 야외 산책 시 필수 아이템</div>
-          </div>
-        </label>
-        <label class="check-item">
-          <input type="checkbox">
-          <div class="check-content">
-            <strong>도윤이 상비약 (소아과 처방)</strong>
-            <div class="check-desc">해열제(아세트/이부 2종 교차용), 감기약, 지사제, 체온계 등</div>
-          </div>
-        </label>
-        <label class="check-item">
-          <input type="checkbox">
-          <div class="check-content">
-            <strong>유아 식사용품 & 비상식량</strong>
-            <div class="check-desc">빨대컵/텀블러, 실리콘 턱받이, 김, 실온 이유식/간편 카레</div>
-          </div>
-        </label>
-        <label class="check-item">
-          <input type="checkbox">
-          <div class="check-content">
-            <strong>기저귀 & 건/물티슈</strong>
-            <div class="check-desc">도톰한 물티슈, 기저귀 넉넉히 챙기기 (부족 시 현지 마트 구매)</div>
-          </div>
-        </label>
+        <label class="check-item"><input type="checkbox"><div class="check-content"><strong>방한 겉옷 & 바람막이/경량패딩</strong><div class="check-desc">10월 말 후모톳파라(캠핑장) 등 고지대 필수 방한용품</div></div></label>
+        <label class="check-item"><input type="checkbox"><div class="check-content"><strong>기내 반입 휴대용 유모차 & 방풍 커버</strong><div class="check-desc">아울렛 및 야외 산책 시 필수 아이템</div></div></label>
+        <label class="check-item"><input type="checkbox"><div class="check-content"><strong>도윤이 상비약 (소아과 처방)</strong><div class="check-desc">해열제 2종, 감기약, 지사제, 체온계 등</div></div></label>
       </div>
       
-      <h2 class="check-section-title">🚗 렌터카 & 전자기기</h2>
+      <h2 class="check-section-title">🚗 렌터카 & 피크닉</h2>
       <div class="check-list">
-        <label class="check-item">
-          <input type="checkbox">
-          <div class="check-content">
-            <strong>도톰한 피크닉 돗자리 (방수/단열형)</strong>
-            <div class="check-desc">후모톳파라 데이캠프 시 바닥 한기 차단용 (매우 중요)</div>
-          </div>
-        </label>
-        <label class="check-item">
-          <input type="checkbox">
-          <div class="check-content">
-            <strong>차량용 스마트폰 거치대 & 시거잭 충전기</strong>
-            <div class="check-desc">구글 지도 내비게이션 사용 시 배터리 소모 방지용</div>
-          </div>
-        </label>
-        <label class="check-item">
-          <input type="checkbox">
-          <div class="check-content">
-            <strong>차량용 햇빛 가리개 & 쓰레기봉투(비닐) 여러 장</strong>
-            <div class="check-desc">이동 중 도윤이 낮잠 & 기저귀/간식 쓰레기 처리용</div>
-          </div>
-        </label>
-        <label class="check-item">
-          <input type="checkbox">
-          <div class="check-content">
-            <strong>110V 변환 어댑터(돼지코) & 멀티탭</strong>
-            <div class="check-desc">돼지코 2~3개와 멀티탭 챙겨가면 숙소에서 동시 충전 편리</div>
-          </div>
-        </label>
-        <label class="check-item">
-          <input type="checkbox">
-          <div class="check-content">
-            <strong>보조배터리</strong>
-            <div class="check-desc">외출 시 필수 (반드시 기내 수하물로 휴대, 위탁 수하물 X)</div>
-          </div>
-        </label>
+        <label class="check-item"><input type="checkbox"><div class="check-content"><strong>도톰한 피크닉 돗자리 (현지 마트 구매)</strong><div class="check-desc">첫날 공항 ➔ 목장 가는 길 카인즈(홈센터)에서 구매 예정</div></div></label>
+        <label class="check-item"><input type="checkbox"><div class="check-content"><strong>차량용 스마트폰 거치대 & 시거잭 충전기</strong><div class="check-desc">구글 지도 내비게이션 사용 시 배터리 소모 방지용</div></div></label>
       </div>
     </section>
 
     <!-- Day 1 (금) -->
     <section class="day-panel">
       <div class="summary-card">
-        <strong>항공편:</strong> 제주항공 7C1601 (인천 T1 07:05 ➔ 시즈오카 09:00)<br>
-        <strong>수하물:</strong> 위탁 15kg 제공 | <strong>숙소:</strong> 후지시 아파트 (후지초 11-1)
+        <strong>목표:</strong> 장보기 ➔ 목장 체험 ➔ 후지산 데이캠프<br>
+        <strong>항공:</strong> 07:05 ICN ➔ 09:00 FSZ (제주 7C1601)<br>
+        <strong>숙소:</strong> 후지시 아파트 (후지초 11-1)
       </div>
       <div class="timeline">
         <div class="card">
-          <div class="badge-wrap">
-            <span class="time-badge flight-badge">07:05 ~ 09:00</span>
-          </div>
+          <div class="badge-wrap"><span class="time-badge flight-badge">07:05 ~ 09:00</span></div>
           <h3>인천 출국 ➔ 시즈오카 공항 도착</h3>
-          <p>입국 수속 완료 후 렌터카 카운터 이동 (카시트 장착 상태 점검)</p>
+          <p>입국 수속 및 렌터카 수령 완료 후 후지노미야로 출발 (🚗 약 1시간 10분 이동)</p>
         </div>
 
         <div class="card">
-          <div class="badge-wrap">
-            <span class="time-badge">12:00 ~ 16:30</span>
-            <span class="status-badge status-free">무료 입장</span>
+          <div class="badge-wrap"><span class="time-badge">10:30 ~ 11:30</span></div>
+          <h3>피크닉 장보기: 카인즈 & 맥스밸류</h3>
+          <p>목장 가는 길목에 있는 대형 마트와 홈센터. 후모톳파라에서 쓸 <b>두꺼운 돗자리</b>와 점심 도시락, 도윤이 간식 구매!</p>
+          <div class="navi-box">☎️ 카인즈 내비: 0544-25-5111</div>
+          <div class="btn-group">
+            <a href="https://www.google.com/maps/search/?api=1&query=CAINZ+Fujinomiya" target="_blank" class="btn mart-btn">🛒 카인즈 (돗자리)</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=MaxValu+Miyahara+Fujinomiya" target="_blank" class="btn mart-btn">🍱 맥스밸류 (도시락)</a>
           </div>
+        </div>
+
+        <div class="card">
+          <div class="badge-wrap"><span class="time-badge">12:00 ~ 14:00</span><span class="status-badge status-ok">현장 발권</span></div>
+          <h3>마카이노 목장 (점심 & 동물 체험)</h3>
+          <p>동물 먹이주기 체험, 포토존 구경, 신선한 우유 아이스크림 간식</p>
+          <div class="navi-box">☎️ 내비: 0544-54-0342</div>
+          <div class="price-box">💵 <strong>입장료:</strong> 대인 약 1,200엔 / <strong>3세 이하 무료</strong></div>
+          <div class="btn-group"><a href="https://www.google.com/maps/search/?api=1&query=Makaino+Farm" target="_blank" class="btn">📍 목장 구글 지도</a></div>
+        </div>
+
+        <div class="card">
+          <div class="badge-wrap"><span class="time-badge">14:30 ~ 17:00</span><span class="status-badge status-req">예약 필수</span></div>
+          <h3>후모톳파라 캠핑장 데이캠프</h3>
+          <p>마트에서 산 돗자리 깔고 후지산 보며 피크닉 & 도윤이 낮잠 타임</p>
+          <div class="navi-box">☎️ 내비: 0544-52-2112</div>
+          <div class="tip-box">💡 10월 말 후모톳파라는 쌀쌀합니다. 바람막이 등 겉옷을 꼭 입혀주세요.</div>
+          <div class="btn-group"><a href="https://www.google.com/maps/search/?api=1&query=Fumotoppara+Campground" target="_blank" class="btn">🏕️ 후모톳파라 지도</a></div>
+        </div>
+
+        <div class="card">
+          <div class="badge-wrap"><span class="time-badge">18:00 ~</span></div>
+          <h3>후지시 숙소 체크인 & 저녁 식사</h3>
+          <p>피크닉 후 🚗 약 45분 이동하여 숙소 도착 및 근처 식당(아지노민게이 일식 등) 저녁 식사</p>
+          <div class="btn-group"><a href="https://www.google.com/maps/search/?api=1&query=11-1+Fujicho,+Fuji,+Shizuoka" target="_blank" class="btn home-btn">🏠 후지시 숙소 위치</a></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Day 2 (토) -->
+    <section class="day-panel">
+      <div class="summary-card">
+        <strong>목표:</strong> 고텐바 프리미엄 아울렛 종일 쇼핑<br>
+        <strong>거리:</strong> 후지시 숙소 ➔ 아울렛 (🚗 약 40분 소요)
+      </div>
+      <div class="timeline">
+        <div class="card">
+          <div class="badge-wrap"><span class="time-badge">10:00 ~ 16:30</span><span class="status-badge status-free">무료 입장</span></div>
           <h3>고텐바 프리미엄 아울렛</h3>
-          <p>푸드코트 점심 식사 및 본격적인 쇼핑 타임!</p>
+          <p>푸드코트 점심 식사 및 본격적인 쇼핑 타임! 도윤이는 유모차에서 낮잠.</p>
+          <div class="navi-box">☎️ 내비: 0550-81-3122</div>
           
           <div class="tip-box" style="flex-direction: column; gap: 6px;">
             <strong style="color: #c53030;">🛍️ 도윤이네 맞춤 쇼핑 리스트</strong>
             <ul style="margin-left: 18px; font-size: 0.8rem; color: #4a5568; line-height: 1.5;">
-              <li><strong>폴로 랄프로렌:</strong> 매장이 크고 <b>키즈/베이비 라인</b>이 잘 되어 있어 도윤이 옷 득템 1순위.</li>
-              <li><strong>미키하우스 (Miki House):</strong> 일본 아울렛 필수 방문! 도윤이 첫걸음마 신발이나 옷 사기 좋습니다.</li>
-              <li><strong>아크테릭스 & 나이키:</strong> 아빠 엄마 아웃도어/운동화 필수 코스. (나이키는 한국보다 훨씬 저렴)</li>
-              <li><strong>젤라토 피케 (Gelato Pique):</strong> 부들부들한 파자마 구경하고, 매장 앞 <b>'젤라토 피케 카페'에서 크레페 간식 필수!</b></li>
-              <li><strong>디즈니 / 산리오 스토어:</strong> 아기 장난감과 귀여운 구경거리 가득.</li>
-              <li><strong>프라다, 구찌, 셀린느:</strong> 텍스프리+엔저 혜택으로 인기가 가장 많은 명품관.</li>
+              <li><strong>폴로 랄프로렌:</strong> <b>키즈/베이비 라인</b>이 잘 되어 있어 도윤이 옷 득템 1순위 (면세 O)</li>
+              <li><strong>미키하우스 (Miki House):</strong> 도윤이 신발 및 의류 사기 좋습니다.</li>
+              <li><strong>노스페이스 & 몽벨:</strong> 도윤이/어른 아웃도어. (몽벨은 면세 안됨)</li>
+              <li><strong>아크테릭스 & 나이키:</strong> 아빠 엄마 아웃도어/운동화 필수 코스 (나이키 초저렴)</li>
+              <li><strong>젤라토 피케:</strong> 파자마 구경하고 매장 앞 <b>'크레페' 간식 필수!</b></li>
             </ul>
           </div>
           
@@ -352,74 +256,9 @@
         </div>
 
         <div class="card">
-          <div class="badge-wrap">
-            <span class="time-badge">17:00 ~</span>
-          </div>
-          <h3>후지시 숙소 체크인 & 저녁 장보기</h3>
-          <p>숙소 도착 후 짐 풀고 근처 마트에서 물, 과일, 아기 간식 장보기</p>
-          <div class="btn-group">
-            <a href="https://www.google.com/maps/search/?api=1&query=11-1+Fujicho,+Fuji,+Shizuoka" target="_blank" class="btn home-btn">🏠 후지시 숙소 위치</a>
-            <a href="https://www.google.com/maps/search/?api=1&query=Shizutetsu+Store+Fuji+Station+South" target="_blank" class="btn mart-btn">🛒 시즈테츠 스토어 (도보 4분)</a>
-            <a href="https://www.google.com/maps/search/?api=1&query=MaxValu+Express+Fuji+Mitojima" target="_blank" class="btn mart-btn">🛒 맥스밸류 (23:30까지)</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Day 2 (토) -->
-    <section class="day-panel">
-      <div class="summary-card">
-        <strong>목표:</strong> 사파리 관람 및 가와구치코 후지산 뷰 투어<br>
-        <strong>식사:</strong> 조식(숙소) / 중식(사파리 파크) / 석식(호우토우 후도)
-      </div>
-      <div class="timeline">
-        <div class="card">
-          <div class="badge-wrap">
-            <span class="time-badge">09:00 ~ 12:00</span>
-            <span class="status-badge status-req">예약 권장(할인)</span>
-          </div>
-          <h3>후지 사파리 파크</h3>
-          <p>렌터카를 그대로 몰고 들어가 창문 너머로 맹수/초식동물 밀착 관람</p>
-          <div class="price-box">
-            💵 <strong>입장료:</strong> 대인 3,200엔 / 소인(4세~중학) 2,000엔 / <strong>3세 이하 무료</strong><br>
-            🚗 자가용 진입 비용 무료 (공식 웹 회원가입 예매 시 인당 약 300~500엔 할인)
-          </div>
-          <div class="btn-group">
-            <a href="https://www.google.com/maps/search/?api=1&query=Fuji+Safari+Park" target="_blank" class="btn">🦁 사파리 지도</a>
-            <a href="https://www.fujisafari.co.jp/" target="_blank" class="btn book-btn">🌐 공식 웹사이트</a>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="badge-wrap">
-            <span class="time-badge">12:00 ~ 13:00</span>
-          </div>
-          <h3>점심 식사: 사파리 레스토랑</h3>
-          <p>사파리 파크 내 식당 (사자 오므라이스, 아기 의자, 키즈 식판 완비)</p>
-        </div>
-
-        <div class="card">
-          <div class="badge-wrap">
-            <span class="time-badge">13:30 ~ 17:00</span>
-          </div>
-          <h3>가와구치코 & 후지요시다 관광</h3>
-          <p>이동 중 아이 차내 낮잠 (약 50분 소요)<br>• 혼초거리 포토존 (Paraca 주차장)<br>• 로손 가와구치코역 앞 포토존<br>• 오이시 공원 산책</p>
-          <div class="btn-group">
-            <a href="https://www.google.com/maps/search/?api=1&query=Paraca+Fujiyoshida+City+Parking+Lot" target="_blank" class="btn">🅿️ 파라카 주차장</a>
-            <a href="https://www.google.com/maps/search/?api=1&query=Oishi+Park" target="_blank" class="btn">🏞️ 오이시 공원</a>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="badge-wrap">
-            <span class="time-badge">17:00 ~ 18:30</span>
-          </div>
-          <h3>저녁: 호우토우 후도 (히가시코이지점)</h3>
-          <p>구름 모양의 건축물. 면이 부드러운 된장 전골 칼국수라 아기와 먹기 매우 좋음</p>
-          <div class="price-box">💵 호우토우 1그릇 약 1,200~1,400엔 (넓은 좌식 다다미방 구비)</div>
-          <div class="btn-group">
-            <a href="https://www.google.com/maps/search/?api=1&query=Houtou+Fudou+Higashikoiji" target="_blank" class="btn food-btn">🍲 호우토우 후도 지도</a>
-          </div>
+          <div class="badge-wrap"><span class="time-badge">17:30 ~</span></div>
+          <h3>후지시 복귀 및 저녁 식사</h3>
+          <p>숙소 근처 패밀리 레스토랑(사와야카 함바그 등) 또는 아울렛 근처 식사 후 휴식</p>
         </div>
       </div>
     </section>
@@ -427,49 +266,44 @@
     <!-- Day 3 (일) -->
     <section class="day-panel">
       <div class="summary-card">
-        <strong>목표:</strong> 자연 목장 체험 & 후지산 정면 데이캠프<br>
-        <strong>준비물:</strong> 피크닉 돗자리, 따뜻한 겉옷, 마트 도시락/음료
+        <strong>목표:</strong> 사파리 동물 관람 ➔ 가와구치코 관광 ➔ 명물 전골
       </div>
       <div class="timeline">
         <div class="card">
-          <div class="badge-wrap">
-            <span class="time-badge">09:30 ~ 12:00</span>
-            <span class="status-badge status-ok">현장 발권</span>
-          </div>
-          <h3>마카이노 목장</h3>
-          <p>동물 먹이주기 체험, 후지산 배경 그네 포토존, 신선한 우유 아이스크림</p>
-          <div class="price-box">💵 <strong>입장료:</strong> 대인 약 1,200엔 / <strong>3세 이하 무료</strong> (먹이 자판기 100~200엔)</div>
+          <div class="badge-wrap"><span class="time-badge">09:00 ~ 12:00</span><span class="status-badge status-req">예약 권장</span></div>
+          <h3>후지 사파리 파크</h3>
+          <p>렌터카를 그대로 몰고 들어가 창문 너머로 맹수/초식동물 밀착 관람</p>
+          <div class="navi-box">☎️ 내비: 055-998-1311</div>
+          <div class="price-box">💵 <strong>입장료:</strong> 대인 3,200엔 / <strong>3세 이하 무료</strong> (자가용 진입 무료)</div>
           <div class="btn-group">
-            <a href="https://www.google.com/maps/search/?api=1&query=Makaino+Farm" target="_blank" class="btn">📍 목장 구글 지도</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=Fuji+Safari+Park" target="_blank" class="btn">🦁 사파리 지도</a>
+            <a href="https://www.fujisafari.co.jp/" target="_blank" class="btn book-btn">🌐 공식 웹 예매</a>
           </div>
         </div>
 
         <div class="card">
-          <div class="badge-wrap">
-            <span class="time-badge">12:30 ~ 16:30</span>
-            <span class="status-badge status-req">예약 필수</span>
-          </div>
-          <h3>후모톳파라 캠핑장 데이캠프</h3>
-          <p>편의점/마트 도시락 피크닉 & 돗자리에서 후지산 보며 도윤이 낮잠</p>
-          <div class="price-box">
-            💵 <strong>데이캠프 요금:</strong> 차량 1대 1,000엔 + 대인 1인당 500엔 / <strong>미취학아동 무료</strong><br>
-            ⚠️ <strong>중요:</strong> 공식 웹사이트 사전 예약 필수 (현장 접수 불가)
-          </div>
-          <div class="tip-box">💡 10월 말 후모톳파라는 바람이 불어 기온이 뚝 떨어집니다. 도톰한 담요와 바람막이를 꼭 챙기세요.</div>
+          <div class="badge-wrap"><span class="time-badge">12:00 ~ 13:00</span></div>
+          <h3>점심 식사: 사파리 레스토랑</h3>
+          <p>사파리 파크 내 식당 (사자 오므라이스, 아기 의자, 키즈 식판 완비)</p>
+        </div>
+
+        <div class="card">
+          <div class="badge-wrap"><span class="time-badge">14:00 ~ 17:00</span></div>
+          <h3>가와구치코 & 후지요시다 관광</h3>
+          <p>이동 중 차에서 도윤이 낮잠 (🚗 약 45분)<br>• 혼초거리 (Paraca 주차장)<br>• 오이시 공원 산책</p>
           <div class="btn-group">
-            <a href="https://fumotoppara.net/" target="_blank" class="btn book-btn">🏕️ 후모톳파라 예약 사이트</a>
-            <a href="https://www.google.com/maps/search/?api=1&query=Fumotoppara+Campground" target="_blank" class="btn">📍 구글 지도</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=Paraca+Fujiyoshida+City+Parking+Lot" target="_blank" class="btn">🅿️ 파라카 주차장</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=Oishi+Park" target="_blank" class="btn">🏞️ 오이시 공원</a>
           </div>
         </div>
 
         <div class="card">
-          <div class="badge-wrap">
-            <span class="time-badge">17:00 ~</span>
-          </div>
-          <h3>저녁: 이온몰 후지노미야</h3>
-          <p>피크닉 후 따뜻한 쇼핑몰 푸드코트 이용. 수유실 및 유아 휴게실 완벽</p>
+          <div class="badge-wrap"><span class="time-badge">17:00 ~ 18:30</span></div>
+          <h3>저녁: 호우토우 후도 (히가시코이지점)</h3>
+          <p>구름 모양의 건축물. 면이 부드러운 된장 전골 칼국수라 아기와 먹기 매우 좋음 (다다미방)</p>
+          <div class="navi-box">☎️ 내비: 0555-72-8511</div>
           <div class="btn-group">
-            <a href="https://www.google.com/maps/search/?api=1&query=Aeon+Mall+Fujinomiya" target="_blank" class="btn food-btn">🏬 이온몰 지도</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=Houtou+Fudou+Higashikoiji" target="_blank" class="btn food-btn">🍲 호우토우 후도 지도</a>
           </div>
         </div>
       </div>
@@ -483,46 +317,37 @@
       </div>
       <div class="timeline">
         <div class="card">
-          <div class="badge-wrap">
-            <span class="time-badge">09:30 ~ 12:00</span>
-          </div>
+          <div class="badge-wrap"><span class="time-badge">09:30 ~ 12:00</span></div>
           <h3>시즈오카 시내 쇼핑</h3>
           <p>신시즈오카 세노바 & 파르코 백화점 쇼핑 및 유아 휴게실 이용</p>
-          <div class="tip-box">💡 시즈오카 명물(녹차 가공품, 과자류)은 공항 면세점이 좁으므로 백화점 지하 식품관에서 미리 사두는 것이 좋습니다.</div>
+          <div class="tip-box">💡 시즈오카 명물(녹차 가공품, 과자류)은 공항 면세점이 좁으므로 백화점 식품관 사전 구매 권장</div>
         </div>
 
         <div class="card">
-          <div class="badge-wrap">
-            <span class="time-badge">12:00 ~ 13:30</span>
-          </div>
+          <div class="badge-wrap"><span class="time-badge">12:00 ~ 13:30</span></div>
           <h3>점심: 세노바 5층 사와야카 함바그</h3>
-          <p>오전 10시 백화점 오픈 시 매장 앞 발권기에서 미리 대기표를 뽑아두면 수월함</p>
+          <p>10시 백화점 오픈 시 매장 앞 발권기에서 미리 대기표 뽑기 권장</p>
         </div>
 
         <div class="card">
-          <div class="badge-wrap">
-            <span class="time-badge">14:00 ~ 16:30</span>
-            <span class="status-badge status-ok">현장 발권</span>
-          </div>
+          <div class="badge-wrap"><span class="time-badge">14:30 ~ 16:30</span><span class="status-badge status-ok">현장 발권</span></div>
           <h3>야이즈 장난감 미술관</h3>
-          <p>편백나무 볼풀장, 원목 장난감이 가득한 실내 감성 놀이터 (주차 무료)</p>
-          <div class="price-box">💵 <strong>입장료:</strong> 대인 700엔 / 유아(1세 이상) 500엔 / <strong>1세 미만 무료</strong></div>
+          <p>편백나무 볼풀장, 원목 장난감이 가득한 실내 감성 놀이터 (🚗 시내에서 35분 이동)</p>
+          <div class="navi-box">☎️ 내비: 054-625-8322</div>
+          <div class="price-box">💵 <strong>입장료:</strong> 대인 700엔 / 유아 500엔 / <strong>1세 미만 무료</strong></div>
           <div class="btn-group">
-            <a href="https://yaizu-toymuseum.com/" target="_blank" class="btn">🌐 미술관 사이트</a>
             <a href="https://www.google.com/maps/search/?api=1&query=Yaizu+Toy+Museum" target="_blank" class="btn">📍 미술관 지도</a>
           </div>
         </div>
 
         <div class="card">
-          <div class="badge-wrap">
-            <span class="time-badge">17:00 ~</span>
-          </div>
+          <div class="badge-wrap"><span class="time-badge">17:00 ~</span></div>
           <h3>카메노이 호텔 야이즈 체크인 & 저녁</h3>
-          <p>스시로 야이즈점에서 회전초밥(우동, 계란말이 등) 식사 후 호텔 체크인 및 온천</p>
+          <p>스시로 야이즈점에서 회전초밥(우동, 계란말이 등) 식사 후 호텔 온천 휴식</p>
+          <div class="navi-box">☎️ 호텔 내비: 054-627-0661</div>
           <div class="btn-group">
-            <a href="https://www.google.com/maps/search/?api=1&query=Kamenoi+Hotel+Yaizu" target="_blank" class="btn home-btn">🏨 카메노이 호텔 지도</a>
+            <a href="https://www.google.com/maps/search/?api=1&query=Kamenoi+Hotel+Yaizu" target="_blank" class="btn home-btn">🏨 호텔 지도</a>
             <a href="https://www.google.com/maps/search/?api=1&query=Sushiro+Yaizu" target="_blank" class="btn food-btn">🍣 스시로 야이즈점</a>
-            <a href="https://www.google.com/maps/search/?api=1&query=Aeon+Yaizu" target="_blank" class="btn mart-btn">🛒 이온 야이즈점 (대형마트)</a>
           </div>
         </div>
       </div>
@@ -536,23 +361,19 @@
       </div>
       <div class="timeline">
         <div class="card">
-          <div class="badge-wrap">
-            <span class="time-badge">07:20 ~ 08:15</span>
-          </div>
+          <div class="badge-wrap"><span class="time-badge">07:20 ~ 08:15</span></div>
           <h3>호텔 체크아웃 ➔ 주유 ➔ 렌터카 반납</h3>
-          <p>야이즈에서 공항까지 약 35분 소요. 공항 직전 주유소에서 기름 만따(가득) 채우고 영수증 챙기기</p>
-          <div class="tip-box">💡 렌터카 반납 시 주유소 영수증 제출을 요구하므로 버리지 말고 꼭 챙기세요.</div>
+          <p>야이즈에서 공항까지 🚗 약 35분. 공항 직전 주유소에서 만따(가득) 채우고 영수증 챙기기!</p>
+          <div class="tip-box">💡 렌터카 반납 시 주유소 영수증 제출을 요구합니다.</div>
           <div class="btn-group">
             <a href="https://www.google.com/maps/search/?api=1&query=Gas+Station+near+Shizuoka+Airport" target="_blank" class="btn">⛽ 공항 인근 주유소</a>
           </div>
         </div>
 
         <div class="card">
-          <div class="badge-wrap">
-            <span class="time-badge flight-badge">08:30 ~ 10:10</span>
-          </div>
+          <div class="badge-wrap"><span class="time-badge flight-badge">08:30 ~ 10:10</span></div>
           <h3>출국 수속 & 탑승</h3>
-          <p>소형 공항이라 수속은 빠르지만 탑승동 면세 구역은 매우 작습니다. 편의점에서 도윤이 간식 및 음료 구매 후 탑승 대기</p>
+          <p>공항 면세 구역이 작으니, 편의점에서 도윤이 비행기용 간식/음료 미리 사두기</p>
         </div>
       </div>
     </section>
@@ -572,4 +393,3 @@
   </script>
 </body>
 </html>
-```<FollowUp></FollowUp>
